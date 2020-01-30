@@ -86,10 +86,10 @@ function createPost( userId , id , title){
 function targetPost(e){
    
    // parent target post  
-   let parentPost = e.target.parentElement.parentElement ;
+   var parentPost = e.target.parentElement.parentElement ;
 
     // id post target 
-    let userIdTarget = parentPost.children[1].innerHTML;
+    var userIdTarget = parentPost.children[1].innerHTML;
 
   // if target for icon delete 
   if(e.target.classList.contains('img')){ 
@@ -122,7 +122,7 @@ function saveUser(namePost , user){
 
 
 
-// ------------- event clicker ----------------
+// ------------- event click ----------------
 
 // add user btn 
 let addUser = document.getElementById('insertUser');
