@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style2.css">
+    <title>User</title>
+</head>
+<body>
+    
+    <div class="content-user">
+        <button class="btn" id="main-page">Main page</button>
+        <div class="box">
+            <div class="id">
+                <h3> UserId : <span id="post"></span></h3>
+                <h3> id : <span id="UserID"></span></h3>
+            </div>
+            <div class="result">
+                <h3 class="address">Title:</h3>
+                <p id="title"></p>
+                <h3 class=address>body :</h3>
+                <p id="body"></p>
+            </div>
+       </div>
+    </div>
+
+    <script>
+        
+       let PostId = document.getElementById('post'),
+            UserID = document.getElementById('UserID'),
+           titleUser = document.getElementById('title'),
+           bodyUser = document.getElementById('body');
+
+
+           let post = JSON.parse(localStorage.getItem('post'))
+            // this condition confirm for object is empty or not 
+           if(post.hasOwnProperty('title')){
+             // if post empty meaning , you click button show on the user new create :)
+             getPost('post');
+           }else{
+             getPost('obj');
+
+           }
+
+
+           function getPost(nameLocalStorage ){
+             
+            let obj = JSON.parse(localStorage.getItem(nameLocalStorage));
+
+              PostId.innerHTML = obj.userId ;
+              UserID.innerHTML = obj.id;
+              titleUser.innerHTML = obj.title ;
+              bodyUser.innerHTML = obj.body ;
+           }
+
+
+
+           document.getElementById('main-page').addEventListener('click' , function (){
+               // because click to add user return post empty and switch local to obj 
+               localStorage.removeItem('post')
+               location.href = 'index.html'
+           })
+    
+    </script>
+</body>
+</html>
+

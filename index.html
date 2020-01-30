@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Table Users</title>
+</head>
+<body>
+
+
+               <section class="header">
+                   <h3>Users API</h3>
+                   <div>
+                       <p>this is simple project to users post api</p>
+                        <button class="btn" id="newUser">new user</button>
+                   </div>
+               </section>
+              
+               <section class="users">
+                        <form>
+                            <table id="table-post">
+                                <tr>
+                                    <th>User ID#</th>
+                                    <th>id</th>
+                                    <th>title</th>
+                                    <th>details</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </table>
+                        </form>
+               </section>
+               
+               <div class="pop-up d-none" id="insertUser">
+                    <div id="addUser">
+                      <h4>New User</h4>
+                        <div class="newUser">
+                            <label>UserID</label>
+                            <input type="number" placeholder="number only" id="userID">
+                            <label>title</label>
+                            <input type="text" placeholder="add title" id="title">
+                            <label>body</label>
+                            <input type="text" placeholder="add body" id="body">
+                        </div>
+                        <div class="btns">
+                            <button class="btn" id="save">save</button>
+                            <button class="btn" id="close">close</button>
+                        </div>
+                    </div>
+               </div>
+
+ 
+
+    <script src="app.js"></script>
+</body>
+</html>

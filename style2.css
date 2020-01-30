@@ -1,0 +1,84 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html , body{
+    font-size: 10px ;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.container{
+    background: white ;
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto ;
+}
+
+
+
+.btn{
+    border: none ;
+    background:darkblue;
+    color: white ;
+    box-sizing: border-box;
+    padding: 9px 20px  ;
+    outline: none ;
+    border-radius: 3px ;
+    cursor: pointer;
+    margin-left: 12px ;
+
+}
+
+.btn:active{
+    transform: scale(.97);
+}
+
+
+.content-user{
+    width: 100% ;
+    height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center ; 
+    flex-direction: column; 
+}
+
+.box{
+    width: 50% ;
+    font-size: 1.5em ;
+    background: white ;
+    border-radius: 5px ;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .2);
+}
+
+.id{
+    display: flex;
+    justify-content: space-between;
+    background-color: #cdcdd6;
+    padding: 20px 40px;
+
+}
+
+.result{
+    padding: 0 40px 40px ;
+}
+
+
+.address{
+    margin-top: 20px ;
+    margin-bottom: 5px ;
+}
+
+.content-user .btn{
+    font-size: 1.5em ;
+    align-self: flex-end;
+    margin-right: 25% ;
+    margin-bottom: 1em ;
+}
+
+#body , #title , #post , #UserID{
+    opacity: .8;
+}
